@@ -104,7 +104,8 @@ async function loadProjects() {
     if (!repos) {
       const res = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`);
       if (!res.ok) throw new Error('Gagal mengambil data GitHub');
-      const all = (await res.json()).filter(r => !r.fork);
+      const HIDE = ['Portofolio'];
+      const all = (await res.json()).filter(r => !r.fork && !HIDE.includes(r.name));
       try { sessionStorage.setItem('repoTotal', all.length); } catch {}
       repos = all
         .sort((a, b) => b.stargazers_count - a.stargazers_count || new Date(b.pushed_at) - new Date(a.pushed_at))
