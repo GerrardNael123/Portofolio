@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerrard Nathannael | Machine Learning & Software Developer</title>
+<meta name="description" content="Portofolio Gerrard Nathannael, mahasiswa Teknik Informatika peminatan Machine Learning di Universitas Tarumanagara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<header id="navbar">
+  <a class="logo" href="#home">Gerrard</a>
+  <nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#skills">Keahlian</a></li>
+      <li><a href="#projects">Project</a></li>
+      <li><a href="#certificates">Sertifikat</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap hero-content">
+    <p class="hero-role">Machine learning &amp; software developer</p>
+    <h1>Gerrard<br>Nathannael</h1>
+    <p class="hero-desc">Mahasiswa Teknik Informatika di Universitas Tarumanagara. Saya membangun model yang bisa dipakai orang, dari data mentah sampai aplikasi.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">Lihat project</a>
+      <a href="#contact" class="btn btn-ghost">Hubungi saya</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="sec">
+  <div class="wrap sec-grid">
+    <h2>Tentang saya</h2>
+    <div class="about-body">
+      <div class="prose">
+      <p>Saya mengambil peminatan Machine Learning di Fakultas Teknologi Informasi, Universitas Tarumanagara. Saya tertarik pada smart system dan aplikasi berbasis data, mulai dari deep learning sampai pengembangan software end-to-end.</p>
+      <p>Saya suka proyek yang masalahnya nyata: mulai dari mengumpulkan data, melatih model, sampai membuat antarmuka yang bisa dicoba orang lain.</p>
+    </div>
+      <dl class="stats">
+        <div><dt>Sertifikat</dt><dd id="statCert">0</dd></div>
+        <div><dt>Repository publik</dt><dd id="statRepo">0</dd></div>
+        <div><dt>Keahlian teknis</dt><dd id="statSkill">0</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="sec">
+  <div class="wrap sec-grid flip">
+    <h2>Keahlian</h2>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h3>Machine learning</h3>
+        <ul><li>Python</li><li>Machine learning</li><li>Deep learning (CNN, RNN, LSTM)</li><li>Google Colab &amp; Jupyter</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3>Web</h3>
+        <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Node.js</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3>Bahasa &amp; sistem</h3>
+        <ul><li>C++</li><li>SQL</li><li>Linux</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3>Desain software</h3>
+        <ul><li>UML</li><li>Perancangan sistem</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="sec">
+  <div class="wrap sec-grid">
+    <h2>Project</h2>
+    <div class="projects">
+      <article class="featured">
+        <div>
+          <p class="tag">Project unggulan</p>
+          <h3>Student Burnout Predictor</h3>
+          <p>Model machine learning yang menerima kebiasaan harian mahasiswa dan menghasilkan probabilitas risiko burnout: rendah, sedang, atau tinggi.</p>
+          <a class="project-link" href="https://github.com/GerrardNael123" target="_blank" rel="noopener">Lihat di GitHub</a>
+        </div>
+        <div class="output" aria-label="Contoh output model">
+          <p class="output-title">Contoh output</p>
+          <div class="bar"><span>LOW</span><i style="--v:18%"></i><b>18%</b></div>
+          <div class="bar"><span>MEDIUM</span><i style="--v:52%"></i><b>52%</b></div>
+          <div class="bar"><span>HIGH</span><i style="--v:30%"></i><b>30%</b></div>
+        </div>
+      </article>
+      <h3 class="sub">Repository lainnya</h3>
+      <div class="projects-grid" id="projectsGrid">
+        <p class="loading-text">Memuat project dari GitHub...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificates" class="sec">
+  <div class="wrap sec-grid flip">
+    <h2>Sertifikat</h2>
+    <div>
+      <div class="cert-filters" id="certFilters" role="group" aria-label="Filter sertifikat" hidden></div>
+      <ul class="cert-grid" id="certGrid"></ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="sec">
+  <div class="wrap sec-grid">
+    <h2>Kontak</h2>
+    <div>
+      <p class="contact-lead">Punya proyek, kesempatan magang, atau ingin berdiskusi? Kirim email, saya balas secepatnya.</p>
+      <a class="contact-mail" href="mailto:gerrard.nael@gmail.com">gerrard.nael@gmail.com</a>
+      <button type="button" class="copy-btn" id="copyMail">Salin email</button>
+      <p class="contact-links">
+        <a href="https://github.com/GerrardNael123" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/gerrard-nathannael-495837431/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><p>&copy; 2026 Gerrard Nathannael</p></div>
+</footer>
+
+<dialog id="certDialog" class="cert-dialog" aria-labelledby="certTitle">
+  <div class="cert-stage">
+    <button type="button" class="cert-close" id="certClose" aria-label="Tutup">&times;</button>
+    <img id="certImg" src="" alt="">
+  </div>
+  <div class="cert-info">
+    <div>
+      <h3 id="certTitle"></h3>
+      <p class="cert-sub" id="certSub"></p>
+      <p class="cert-desc" id="certDesc"></p>
+    </div>
+    <div class="cert-nav" id="certNav">
+      <span id="certCount" aria-live="polite"></span>
+      <button type="button" id="certPrev" aria-label="Sertifikat sebelumnya">&larr;</button>
+      <button type="button" id="certNext" aria-label="Sertifikat berikutnya">&rarr;</button>
+    </div>
+  </div>
+</dialog>
+
+<button id="backToTop" aria-label="Kembali ke atas">&uarr;</button>
+<script src="script.js"></script>
+</body>
+</html>
